@@ -9,7 +9,7 @@ local tab4 = Window:CreateTab("Create")
 
 tab4:CreateTextLabel("Made By TDA TEAM")
 tab4:CreateTextLabel("Discord : PhanMinhTri#7630")
-tab4:CreateTextLabel("UI LIBS BY : DEVIL")
+tab4:CreateTextLabel("UI LIBS BY : DEVIL HUB")
 
 tab3:CreateSlider('WalkSpeedChanger', {
     Min = 1,
