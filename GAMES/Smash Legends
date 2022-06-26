@@ -1,1 +1,139 @@
-🛡Smash Legends
+local DEVIL_UI_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Taokotenl/hackbloxfruir/main/Llll", true))()
+
+local Window = DEVIL_UI_Library:CreateWindow('['..identifyexecutor()..']'.." TDA TEAM ►", game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+
+local tab = Window:CreateTab("Farming")
+local tab2 = Window:CreateTab("Auto Buy")
+local tab3 = Window:CreateTab("Mix")
+local tab4 = Window:CreateTab("Create")
+
+tab4:CreateTextLabel("Made By TDA TEAM")
+tab4:CreateTextLabel("Discord : PhanMinhTri#7630")
+tab4:CreateTextLabel("UI LIBS BY : DEVIL")
+
+tab3:CreateSlider('WalkSpeedChanger', {
+    Min = 1,
+    Max = 800,
+    Default = game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed
+}, function(value)
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+
+tab3:CreateSlider('JumpPowerChanger', {
+    Min = 1,
+    Max = 800,
+    Default = game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed
+}, function(value)
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+
+tab:CreateToggle("Auto Farm", function(v)
+	    AutoClick = v
+        sell = "sell2"
+        end)
+        
+spawn(function()
+	while wait() do
+		if AutoClick then
+			if sell == "sell2" then
+game:GetService("ReplicatedStorage").RemoteEvents.Punch:FireServer()
+wait()
+				wait(waittime)
+			end
+		end
+	end
+end)
+
+tab:CreateToggle("Auto Sell", function(v)
+	    AutoSell = v
+        sell = "sell2"
+        end)
+        
+spawn(function()
+	while wait() do
+		if AutoSell then
+			if sell == "sell2" then
+game:GetService("ReplicatedStorage").RemoteEvents.SellTP:FireServer()
+wait()
+				wait(waittime)
+			end
+		end
+	end
+end)
+
+tab2:CreateDropdown(' Update ', {'Strength', 'Damage', 'Health'}, function(v)
+	if v == "Strength" then
+		sell = "sell1"
+	elseif v == "Damage" then
+		sell = "sell2"
+		 elseif v == "Health" then
+		 sell = "sell3"
+	end
+end)
+
+tab2:CreateToggle("Auto Update", function(v)
+	AutoSell2 = v
+        end)
+
+spawn(function()
+	while wait() do
+		if AutoSell2 then
+			if sell == "sell2" then
+local args = {
+    [1] = "Damage"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
+
+				wait(waittime)
+			elseif sell == "sell1" then
+local args = {
+    [1] = "StrengthCap"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
+
+				  wait(waittime)
+				 elseif sell == "sell3" then
+local args = {
+    [1] = "Health"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
+				
+				 wait(waittime)
+			end
+		end
+	end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
