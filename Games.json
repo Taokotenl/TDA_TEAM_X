@@ -1,3 +1,5 @@
 {
-    "5630129588":{"name":"Smash Legends","Script":"https://raw.githubusercontent.com/Taokotenl/TDA_TEAM_X/main/GAMES/Smash%20Legends","Working":true}
+    "5630129588":{"name":"Smash Legends","Script":"https://raw.githubusercontent.com/Taokotenl/TDA_TEAM_X/main/GAMES/Smash%20Legends","Working":true},
+
+    "9281034297":{"name":"Goal Kick Simulator","Script":"https://raw.githubusercontent.com/QwertyzSZ/SAZAISBEST/main/GameSupport/GoalKickSim.lua","Working":true}
 }
