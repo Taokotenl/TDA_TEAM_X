@@ -36,7 +36,7 @@ spawn(function()
 	while wait() do
 		if AutoClick then
 			if sell == "sell2" then
-game:GetService("ReplicatedStorage").RemoteEvents.Punch:FireServer()
+game:GetService("ReplicatedStorage").Remotes.HammerSwing:FireServer()
 wait()
 				wait(waittime)
 			end
@@ -53,7 +53,7 @@ spawn(function()
 	while wait() do
 		if AutoSell then
 			if sell == "sell2" then
-game:GetService("ReplicatedStorage").RemoteEvents.SellTP:FireServer()
+game:GetService("ReplicatedStorage").Remotes.SellRequest:InvokeServer()
 wait()
 				wait(waittime)
 			end
@@ -61,62 +61,64 @@ wait()
 	end
 end)
 
-tab2:CreateDropdown(' Update ', {'Strength', 'Damage', 'Health'}, function(v)
-	if v == "Strength" then
-		sell = "sell1"
-	elseif v == "Damage" then
-		sell = "sell2"
-		 elseif v == "Health" then
-		 sell = "sell3"
-	end
-end)
-
-tab2:CreateToggle("Auto Update", function(v)
-	AutoSell2 = v
+tab:CreateToggle("Auto Open All Chest", function(v)
+	    AutoChest = v
+        sell = "sell2"
         end)
-
+        
 spawn(function()
 	while wait() do
-		if AutoSell2 then
+		if AutoChest then
 			if sell == "sell2" then
 local args = {
-    [1] = "Damage"
+    [1] = "DailyChest"
 }
 
-game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.OpenChest:FireServer(unpack(args))
+local args = {
+    [1] = "GroupChest"
+}
 
+game:GetService("ReplicatedStorage").Remotes.OpenChest:FireServer(unpack(args))
 				wait(waittime)
-			elseif sell == "sell1" then
-local args = {
-    [1] = "StrengthCap"
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
-
-				  wait(waittime)
-				 elseif sell == "sell3" then
-local args = {
-    [1] = "Health"
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.UpgradeMax:InvokeServer(unpack(args))
-				
-				 wait(waittime)
 			end
 		end
 	end
 end)
 
+tab2:CreateToggle("Auto Buy Hammer", function(v)
+	    AutoBuy = v
+        sell = "sell2"
+        end)
+        
+spawn(function()
+	while wait() do
+		if AutoBuy then
+			if sell == "sell2" then
+game:GetService("ReplicatedStorage").Remotes.BuyAllHammers:FireServer()
+wait()
+				wait(waittime)
+			end
+		end
+	end
+end)
 
-
-
-
-
-
-
-
-
-
+tab2:CreateToggle("Auto Prestige", function(v)
+	    AutoClickW = v
+        sell = "sell2"
+        end)
+        
+spawn(function()
+	while wait() do
+		if AutoClickW then
+			if sell == "sell2" then
+game:GetService("ReplicatedStorage").Remotes.Prestige:FireServer()
+wait()
+				wait(waittime)
+			end
+		end
+	end
+end)
 
 
 
