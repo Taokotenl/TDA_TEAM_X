@@ -3,17 +3,3 @@
 
     "9281034297":{"name":"Goal Kick Simulator","Script":"https://raw.githubusercontent.com/QwertyzSZ/SAZAISBEST/main/GameSupport/GoalKickSim.lua","Working":true}
 }
-for i, v in pairs(GameSupport) do
-    if (GameID == tonumber(i) and v.name and v.working) then
-        GameName = v.name
-        urlBody = v.script
-        local success = pcall(function() 
-            SZExecutable = game:HttpGet(urlBody..GameName..sazaFile)
-        end);
-    elseif (v.name and not GameID == tonumber(i) or not v.working) then
-        game.Players.LocalPlayer:Kick("\n| Security Saza |".."\n Script is maintenance\n or \nGame not supported\n\n[TDA TEAM]\n NO LINK\n Paste it on ur Website")
-        setclipboard(SZDiscord)
-    end
-end
-SZInjected(SZExecutable)()
-return GameSupport
