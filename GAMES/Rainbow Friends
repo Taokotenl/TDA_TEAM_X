@@ -1,0 +1,27 @@
+-- Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Taokotenl/libs/main/Libw"))()
+
+-- Create Window
+local Window = Library:Create("VTGSSR.IF","Rainbow Friends")
+
+-- Tab
+local Tab1 = Window:Tab("Tab Free",true)
+local Tab2 = Window:Tab("Tab Plus+",false)
+
+-- Label
+Tab1:Label("© : VTGSSR.IF") 
+Tab1:Label("® : TDA TEAM") 
+Tab1:Label("Code : BLACKSTUDIO")
+
+Tab1:Button("lấy vật phẩm",function(KeyToggle)
+    for i,v in pairs(game.workspace.Map_C1.ItemSpawns:GetDescendants()) do
+   if v.name == "ItemSpawn" then
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+   wait(0.1)
+   end
+end
+end)
+
+Tab1:Button("gửi vật phẩm",function(KeyToggle)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(371.54364013671875, 45.604129791259766, 132.65687561035156)
+end)
