@@ -337,9 +337,9 @@ end
     DinoLoadingUI:Destroy()
 	LoadingTXT.Text = "Done !"
 	wait(2)
-    loadstring(game:HttpGet("https://pastebin.com/raw/kLBGGD73", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Taokotenl/TDA_TEAM_X/main/Load", true))()
 end)
 else
 _G.CandyHopz = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Taokotenl/TDA_TEAM_X/main/Hub" , true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Taokotenl/TDA_TEAM_X/main/Load" , true))()
 end
