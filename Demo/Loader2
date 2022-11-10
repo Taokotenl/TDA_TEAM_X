@@ -279,26 +279,7 @@ LoadButton.MouseButton1Click:Connect(function()
 	wait(3)
     LoadingTXT.Text = "Hello Player From : " .. code
 	wait(2)
-	if game.PlaceId == 7449423635 then
-		LoadingTXT.Text = "Blox Fruit Dino Hub Script [ Sea 3 ]"
-	elseif game.PlaceId == 2753915549 then
-		LoadingTXT.Text = "Blox Fruit Dino Hub Script [ Sea 1 ]"
-	elseif game.PlaceId == 4442272183 then
-		LoadingTXT.Text = "Blox Fruit Dino Hub Script [ Sea 2 ]"   
-	end
-	if game.PlaceId == 4520749081 then
-		LoadingTXT.Text = "King Lecagy Dino Hub Script [ Sea 1 ]"   
-	elseif game.PlaceId == 6381829480 then
-		LoadingTXT.Text = "King Lecagy Dino Hub Script [ Sea 2 ]"   
-	elseif game.PlaceId == 5931540094 then
-		LoadingTXT.Text = "King Lecagy Dino Hub Script [ Raid ]"   
-	elseif game.PlaceId == 537413528 then
-		LoadingTXT.Text = "Build a Boat Script [ By SandaFrosty ]"   
-	elseif game.PlaceId == 7485253727 then
-	    LoadingTXT.Text = "True Piece Script"   
-	end
-if game.PlaceId == 6284583030 then 
-	    LoadingTXT.Text = "Pet Simulator X VTGSSR.IF!"
+	    LoadingTXT.Text = "Made in By VTGSSR.IF!"
 end
 	wait(2)
 	LoadingTXT.Text = "Checking Function..."
@@ -337,9 +318,9 @@ end
     DinoLoadingUI:Destroy()
 	LoadingTXT.Text = "Done !"
 	wait(2)
-    loadstring(game:HttpGet("https://pastebin.com/raw/kLBGGD73", true))()
+    loadstring(game:HttpGet("https://github.com/Taokotenl/TDA_TEAM_X/blob/main/Load", true))()
 end)
 else
 _G.CandyHopz = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/naypramxhub/main/serverhopcandyfarn" , true))()
+loadstring(game:HttpGet("https://github.com/Taokotenl/TDA_TEAM_X/blob/main/Load" , true))()
 end
